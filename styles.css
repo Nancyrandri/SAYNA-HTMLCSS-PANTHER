@@ -22,7 +22,9 @@
 body {
     background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%, rgba(2, 23, 64, 0) 100%);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+    background-image: url(./assets/All_pages/arrière_plan.png);
+   
 }
 
 
@@ -65,8 +67,53 @@ h2 {
 }
 
                                         /*index.html*/
+                                        /*body*/
+
+/*social media in top left of page*/
+.nav-fixed {
+    position: fixed;
+    top: 0px;
+    left: 102px;
+    width: 3%;
+    height: 54%;
+    border-left: #F2CEF2 2px solid;
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+
+
+}
+
+.nav-fixed .in-bar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+.nav-fixed .in-bar .out-bar {
+    border-left: #F2CEF2 2px solid;
+    width: 2px;
+    height: 100%;
+    margin: auto;
+}
+
+.nav-fixed .in-bar .social-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+} 
+
+.nav-fixed .in-bar .social-group a:hover {
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(123deg) brightness(250%) contrast(103%);
+
+}
                                         /*Header*/
-/*Logo top left*/
+
+                                
+/*Logo sayna and others top left*/
 nav .logo_nav_left {
     display: flex;
     align-items: center;
@@ -75,12 +122,12 @@ nav .logo_nav_left {
     padding-left: 170px;
 }
 
-/*Logo to left design*/
+
 nav .logo_nav_left img:hover { 
     filter: invert(60%) sepia(15%) saturate(528%) hue-rotate(219deg) brightness(97%) contrast(90%);
 }
 
-/*Menu*/
+/*Menu top rigth*/
 header .menu {
     display: flex;
     justify-content: right;
@@ -92,42 +139,40 @@ header .menu {
 }
 
 /*Menu bottom design*/
-#accueil {
-    color: white;
-    text-decoration: none;
-    z-index: 5;
-}
-
-#accueil:hover {
-    text-decoration: underline;
-}
-
-#wakanda {
+.menu a {
     color: white;
     text-decoration: none;
 }
-
-#wakanda:hover {
+.menu a:hover {
     text-decoration: underline;
 }
 
-
-#enigm {
-    color: white;
-    text-decoration: none;
+.menu a:active, menu a:focus {
+    color: #9E91B7;
+    text-decoration: underline; 
 }
 
-#enigm:hover {
-    text-decoration: underline;
-}
-       
 /*Section in header*/
 
 /*text in first section*/
+
+/*text and img first section*/
+header .first {
+    display: flex;
+    align-items: center;
+}
+
 header section .first-description {
     width: 55%;
     padding-left: 200px;
     margin-top: 200px;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
 }
 
 .text-first-description, .text-bottom {
@@ -136,10 +181,11 @@ header section .first-description {
     font-weight: regular;
 }
 
-.text-first-description {
+header section .first-description .text-first-description {
     text-align: justify;
 }
 
+/*All text-bottom voir plus*/
 .text-bottom {
     text-decoration: underline;
     padding-top: 15px;
@@ -147,58 +193,23 @@ header section .first-description {
 }
 
 /*img hero in first section*/
-.hero img {
-    max-width: 600px;
-}
-
-.hero {
+section .hero {
     padding-top: 90px;
     padding-bottom: 30px;
 }
 
-/*text and img first section*/
-.first {
-    display: flex;
-    align-items: center;
+section .hero img {
+    max-width: 600px;
 }
+
 
                                                  /*Main*/
 
-/*social media in top left of page*/
-
-.in-bar {
-    border-left: #9E91B7 2px solid;
-    position: fixed;
-    top: 0px;
-    left: 102px;
-    width: 2%;
-    height: 35%;
-}
-
-.out-bar {
-    border-left: #9E91B7 2px solid;
-    position: fixed;
-    top: 0px;
-    left: 75px;
-    width: 2%;
-    height: 54%;
-}
-
-.social-group {
-    padding-top: 280px;
-    /*padding-right: 750px;*/
-}
-
-.social-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}                               /*find solution with this button fixed*/
 
 /*First section in main*/
 
 /*section text and portrait pictures in  description*/
-.list {
+main .list {
     background-color: var(--blue-navy);
     height: 250px;
     margin-left: 100px;
@@ -210,7 +221,7 @@ section .container {
 }
 
 /* design of title of text between portrait pictures*/
-.container .title-list {
+section .container .title-list {
     padding-bottom: 5px;
 }
 
@@ -219,7 +230,7 @@ section .container .text-list {
     padding-left: 20px;
 }
 
-.text-killmonger, .text-okoye {
+section .container .text-list .text-killmonger, .text-okoye {
     font-weight: regular;
     text-align: justify;
     width: 95%;
@@ -227,33 +238,26 @@ section .container .text-list {
 }
 
 /*Portrait pictures*/
-.container .portrait {
+section .container .portrait {
     height: 250px;
 }
-.container {
+section .container {
     display: flex;
     transition-duration: 0.7s;
 }
-#portrait-list:hover {
+
+section .container #portrait-list:hover {
     transform: scale(150.25%);
     transition-duration: 0.7s;
 }
 
 /*Second section in main*/
-
-/*Container desing in all secon section in main*/
 section .paragraph {
-    display: flex;
-}
-
-/*All paragraph in right position*/
-.paragraph .right-section {
-    flex-direction: column;
-    margin-top: 200px;
+    padding: 20px 125px 20px 125px;
 }
 
 /*Text paragraph design*/
-section .second-container {
+section .paragraph .second-container {
     width: 60%;
     text-align: justify;
     padding-left: 30px;
@@ -262,14 +266,31 @@ section .second-container {
 }
 
 /*citation font*/
-.citation {
+section .paragraph .second-container .citation {
     font-size: 14px;
     font-weight: regular;
 }
 
+section .paragraph .second-container ul li {
+    list-style:inside'-';
+}
+
+/*Container desing in all second section in main*/
+section .paragraph {
+    display: flex;
+}
+
+
 /*right section in second section in main*/
+
+/*All paragraph in right position*/
+section .paragraph .right-section {
+    flex-direction: column;
+    margin-top: 200px;
+}
+
 /*biography*/
-.right-section #portrait-acteur {
+section .paragraph .right-section #portrait-acteur {
     width: 350px;
     position: absolute;
     margin-left: 70px;
@@ -277,7 +298,7 @@ section .second-container {
 
 
 /*biography in right position*/
-section .form {
+section .paragraph .right-section .form {
      background-color: var(--white-color);
      height: 750px;
      display: flex;
@@ -292,22 +313,22 @@ section .form {
 }
 
 /*Title design in biography*/
-.form .form-h3 {
+section .paragraph .right-section .form .form-h3 {
     font-family: 'Cantarell';
-    font-size: 16px;
+    font-size: 18px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 /*description in biography*/
-section .biography-text {
+section .paragraph .right-section .form .biography .biography-text {
     color: var(--blue-purple);
     font-size: 16px;
     text-align: justify;
 }
 
 /*button in biography*/
-section .form .button-form {
+section .paragraph .right-section .form .button-form {
     display: flex;
     gap : 25px;
     padding-top: 20px;
@@ -315,7 +336,7 @@ section .form .button-form {
 }
 
 /*button design*/
-.button-form .button-biography {
+section .paragraph .right-section .form .button-form .button-biography {
     background-color: #3D2DA6;
     padding: 20px;
     border-radius: 10px;
@@ -323,7 +344,7 @@ section .form .button-form {
 }
 
 /*button text*/
-.button-form #button-text {
+section .paragraph .right-section .form .button-form #button-text {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 14px;
@@ -331,20 +352,20 @@ section .form .button-form {
 }
 
 /*part of text in biography*/
-.biography-text .death {
+section .paragraph .right-section .form .biography .biography-text .death {
     font-size: 14px;
 }
 
 /*last pictures in right section*/
-.right-section .night-panther {
-    padding-top: 250px;
+section .paragraph .right-section .night-panther {
+    padding-top: 600px;
 }
 
 
 /*contact*/
 
 /*background section design*/
-.contact {
+main .contact {
     background-image: url(./assets/Accueil/Pantherhome7.png);
     padding-top: 200px;
     padding-bottom: 400px;
@@ -363,7 +384,7 @@ section .information {
 }
 
 /*title section design*/
-section .title-information {
+section .information .title-information {
     color:#3D2DA6;
     padding-top: 25px;
     font-size: 14px;
@@ -371,7 +392,7 @@ section .title-information {
 }
 
 /*h1 section design*/
-section .h1-contact {
+section .information .h1-contact {
     color:#3D2DA6;
     font-size: 36px;
     font-weight: bold;
@@ -379,7 +400,7 @@ section .h1-contact {
 }
 
 /*input and textarea design*/
-input[type="name"], input[type="email"] {
+section .information .formulary .place input[type="name"], input[type="email"] {
     display: block;
     width: 520px;
     height: 56px;
@@ -387,20 +408,28 @@ input[type="name"], input[type="email"] {
     border-radius: 38px;
     background-color: transparent;
     padding: 10px;
-    margin-right: 145px;
-    margin-left: 65px;
 }
-                                            /* place hover effect all buttons on formulary*/
 
-textarea {
+section .information .formulary .place input[type="name"]:hover {
+    box-shadow: 0px 0px 20px 0px #3D2DA6;
+}
+
+section .information .formulary .place input[type="email"]:hover {
+    box-shadow: 0px 0px 20px 0px #3D2DA6;
+}
+
+
+section .information .formulary .place textarea {
     display: block;
     width: 520px;
     border: 1px solid #3D2DA6;
     border-radius: 38px;
     background-color: transparent;
     padding: 10px;
-    margin-right: 145px;
-    margin-left: 65px;
+}
+
+section .information .formulary .place textarea:hover {
+    box-shadow: 0px 0px 20px 0px #3D2DA6;
 }
 
 /*placehoder design*/
@@ -411,7 +440,7 @@ textarea {
 }
 
 /*send button design*/
-.send {
+section .information #send-button .send {
     background-color:#9E91B7;
     font-family: 'Cantarell';
     font-size: 12px;
@@ -423,12 +452,16 @@ textarea {
     height: 54px;
 }
 
+section .information #send-button input[type='submit']:hover {
+    box-shadow: 0px 0px 20px 0px #021740;
+}
 
 
                                     /*Footer index*/
 /*background design*/
 footer {
     background: linear-gradient(to bottom, #3d2da6bd 0%, #021740 90.43%) ;
+    background-image: url(./assets/All_pages/back_footer.png);
     display: flex;
     justify-content: space-between;
 }
@@ -436,7 +469,7 @@ footer {
 /*text design*/
 
 /*footer title*/
-h4 {
+footer .footer-right .fist-right-footer h4 {
     font-size: 10px;
     font-family: 'Cantarell';
     color: #FFF;
@@ -445,21 +478,21 @@ h4 {
 }
 
 /*text link*/
-footer #propos, #wakanda-footer {
+footer .footer-right .fist-right-footer .footer-pages #propos, #wakanda-footer {
     font-size: 12px;
 }
 
 /*this text with hover underline in white*/
-#propos:hover {
+footer .footer-right .fist-right-footer .footer-pages #propos:hover {
     text-decoration: underline;
 }
 
-#wakanda-footer:hover {
+footer .footer-right .fist-right-footer .footer-pages #wakanda-footer:hover {
     text-decoration: underline;
 }
 
 /*last text*/
-footer #conditions-text {
+footer .footer-right #conditions-text {
     font-size: 10px;
 }
 
@@ -479,32 +512,32 @@ footer .logo-left-footer {
 }
 
 /*hover effect picture around logo left*/
-.img-footer:hover {
-    transform: scale(1.1);
-    transition-duration: 0.7s;
-}
-
-/*div selection for hover effect*/
-.logo-footer-l {
-    transition-duration: 0.7s;
-}
-
-/*hover effect logo left footer*/
-.icon-footer:hover {
+footer .logo-left-footer .img-footer:hover {
     transform: scale(1.1);
     transition-duration: 0.7s;
 }
 
 /*logo left footer*/
-footer .logo-footer-l {
+footer .logo-left-footer .logo-footer-l {
     display: flex;
     align-items: center;
     position: absolute;
     padding-top: 150px;
 }
 
+/*div selection for hover effect*/
+footer .logo-left-footer .logo-footer-l {
+    transition-duration: 0.7s;
+}
+
+/*hover effect logo left footer*/
+footer .logo-left-footer .logo-footer-l .icon-footer:hover {
+    transform: scale(1.1);
+    transition-duration: 0.7s;
+}
+
 /*icon left hover*/
-footer .icon-footer:hover {
+footer .logo-left-footer .logo-footer-l .icon-footer:hover {
     filter: invert(25%) sepia(57%) saturate(528%) hue-rotate(219deg) brightness(97%) contrast(90%);
 }
 
@@ -517,13 +550,13 @@ footer .footer-right {
     padding-right: 150px;
 }
 
-footer .fist-right-footer {
+footer .footer-right .fist-right-footer {
     display: flex;
     gap: 22px;
 }
 
 /*pages text footer*/
-footer .footer-pages {
+footer .footer-right .fist-right-footer .footer-pages {
     display: flex;
     flex-direction: column;
     padding-right: 22px;
@@ -531,29 +564,29 @@ footer .footer-pages {
 }
 
 /*social media icon and text*/
-footer .footer-find {
+footer .footer-right .fist-right-footer .footer-find {
     display: flex;
     flex-direction: column;
 }
 
 /*social media icon*/
-footer .footer-social {
+footer .footer-right .fist-right-footer .footer-find .footer-social {
     display: flex;
     justify-content: space-between;
 }
 
 /*hover effect all icon social media in footer*/
-.footer-social {
+footer .footer-right .fist-right-footer .footer-find .footer-social {
     transition-duration: 0.7s;
 }
 
-#social-icon:hover {
+footer .footer-right .fist-right-footer .footer-find .footer-social #social-icon:hover {
     transform :scale(1.1);
     transition-duration: 0.7s;
 }
 
 /*last text*/
-footer .conditions {
+footer .footer-right .conditions {
     display: flex;
     padding-top: 170px;
 }
@@ -566,12 +599,12 @@ footer .conditions {
         /*Main first section design*/
 
 /*text design*/
-.section1 h1 {
+.section1 .paragraph1 h1 {
     font-family: 'Beyno';
     font-size: 68px;
 }
 
-.section1 h2 {
+.section1 .paragraph1 h2 {
     font-family: 'Wakanda';
     font-size: 32px;
 }
@@ -590,7 +623,7 @@ footer .conditions {
     padding-bottom: 500px;
 }
 
-.section1 p {
+.section1 .paragraph1 p {
     width: 500px;
 }
 
@@ -608,12 +641,12 @@ section .article1 {
 }
 
 /*width of all div article in main*/
-.article-gauche, .article-droit {
+section .article1 .article-gauche, .article-droit {
     width: 570px;
 }
 
 /*video design*/
-section .w-video {
+section .article1 .article-gauche .w-video {
     display: flex;
     background-color: #3D2DA6;
     align-items: center;
@@ -621,13 +654,17 @@ section .w-video {
     height: 220px;
 }
 
+/*li style*/
+section .article1 ul li {
+    list-style: inside'-';
+}
 /*Wakanda html h2 design*/
-.article1 h2 {
+section .article1 h2 {
     padding-top: 30px;
 }
 
 /*padding of the paragraphe above video section*/
-section .special-paragraphe {
+section .article1 .article-gauche .special-paragraphe {
     padding-bottom: 50px;
 }
 
@@ -636,46 +673,61 @@ section .special-paragraphe {
 /*Main first section*/
 
 /*text design*/
-.top-section h1 {
+.top-section .okoye-container .okoye-text-pictures .okoye-text .h1-okoye h1 {
     font-family: 'Beyno';
-    font-size: 60px;
+    font-size: 32px;
 }
 
-.top-section .okoye-text {
-    width: 550px;
+.top-section .okoye-container .okoye-text-pictures .okoye-text {
+    max-width: 550px;
     text-align: justify;
 }
 
-.top-section p {
+.top-section .okoye-container .okoye-text-pictures .okoye-text .okoye-paragraph p {
     font-size: 14px;
 }
 
 /*design*/
-.okoye-picture {
-    display: flex;
-    height: 600px;
+
+/*all section container*/
+.top-section {
+    /*display: flex;*/
+    width: 100%;
+    padding: 200px 0 0 0;
+    overflow: hidden;
+    background-image: url(./assets/Enigme/Pantherenigme1.png);
+    background-size:60%;
+    background-position: left;
+    background-repeat: no-repeat;
 }
 
 /*first section container*/
 .top-section .okoye-container {
+    width: 100%;
     display: flex;
-    gap: 50px;
+}
+
+/*div with no picture*/
+.top-section .okoye-container .okoye-picture {
+    width: 50%;
 }
 
 /*paragraph and pictures*/
-.top-section .okoye-text-pictures {
+.top-section .okoye-container .okoye-text-pictures {
     display: flex;
-    flex-direction: column;
-    padding-bottom: 100px;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
 }
 
 /*h1 first section design*/
-.top-section .h1-okoye {
-    padding-top: 250px;
+.top-section .okoye-container .okoye-text-pictures .okoye-text .h1-okoye {
+    /*padding-top: 250px;*/
     padding-bottom: 75px;
 }
 
-.top-section .okoye-paragraph {
+.top-section .okoye-container .okoye-text-pictures .okoye-text .okoye-paragraph {
     display: flex;
     flex-direction: column;
     padding-top: 80px;
@@ -683,34 +735,25 @@ section .special-paragraphe {
     justify-content: center;
 }
 
-.top-section .okoye-paragraph p {
-    width: 450px;
+.top-section .okoye-container .okoye-text-pictures .okoye-text .okoye-paragraph p {
+    max-width: 450px;
 }
 
-/*.top-section .illustration {
-    position: absolute;
-    padding-bottom: 75px;
-    padding-top: 100px;
-}
 
-.top-section .barre {
-    padding-top: 150px;
-    padding-bottom: 100px;
-
-}*/
-
-.top-section .illustration {
+.top-section .okoye-container .okoye-text-pictures .okoye-text .okoye-paragraph .illustration {
     position: absolute;
     padding-bottom: 200px;
 }
-
-.top-section .barre {
-    position: inherit;
-    padding-top: 200px;
-    margin-right: 160px;
+.top-section .okoye-container .okoye-text-pictures .okoye-text .okoye-paragraph .illustration img {
+    width: auto;
+    right: 0;
 }
 
-
+.top-section .okoye-container .okoye-text-pictures .okoye-text .okoye-paragraph .barre {
+    position: inherit;
+    padding-top: 200px;
+    overflow: hidden;
+}
 
 /*Main second section*/
 
@@ -721,43 +764,47 @@ section .special-paragraphe {
     width: 900px;
 }
 
-.bottom-section .alphabet {
+.bottom-section .bottom-okoye .bottom-section-left .bottom-alphabet .bottom-description {
+    text-transform: uppercase;
+}
+
+.bottom-section .bottom-okoye .bottom-section-left .bottom-alphabet .alphabet {
     font-family: 'Wakanda';
     text-transform: uppercase;
 }
 
-.bottom-section .bottom-description {
-    text-transform: uppercase;
-}
-
 /*design*/
+.bottom-section {
+    width: 100%;
+    padding: 50px 75px 250px 75px;
+}
 .bottom-section .bottom-okoye {
     display: flex;
+    width: 100%;
 }
 
-.bottom-section .bottom-section-left {
-    padding-left: 50px;
+.bottom-section .bottom-okoye .bottom-section-left {
     width: 50%;
 }
 
-.bottom-section .bottom-alphabet {
+.bottom-section .bottom-okoye .bottom-section-left .bottom-alphabet {
     width: 545px;
     padding-top: 50px;
     padding-bottom: 150px
 }
 
-.bottom-section .bottom-intro {
+.bottom-section .bottom-okoye .bottom-section-left .bottom-alphabet .bottom-intro {
     padding-bottom: 20px;
 }
 
 /*answer section*/
-.bottom-section .bottom-answer {
+.bottom-section .bottom-okoye .bottom-section-left .bottom-answer {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-input[type='text'] {
+.bottom-section .bottom-okoye .bottom-section-left .bottom-answer input[type='text'] {
     display: block;
     width: 520px;
     height: 56px;
@@ -769,14 +816,14 @@ input[type='text'] {
     padding-left: 30px;
 }
 
-.bottom-section .answer-place{
+.bottom-section .bottom-okoye .bottom-section-left .bottom-answer .answer-place{
     padding-top: 25px;
     padding-bottom: 100px;
 }
 
 
 /*send button*/
-.bottom-section .send-button {
+.bottom-section .bottom-okoye .bottom-section-left .bottom-answer .send-button {
     background-color:#9E91B7;
     font-family: 'Cantarell';
     font-size: 12px;
@@ -788,8 +835,19 @@ input[type='text'] {
     height: 54px;
 }
 
-.bottom-section .answer-send {
-    padding-bottom: 250px;
+.bottom-section .bottom-okoye .bottom-section-left .bottom-answer .send-button:hover {
+    box-shadow: 0px 0px 20px 0px #F2CEF2;
+}
+
+.bottom-section .bottom-okoye .bottom-section-left .bottom-answer .answer-place input::placeholder {
+    color:#F2CEF2;
+}
+
+.bottom-section .bottom-okoye .bottom-section-left .bottom-answer .answer-place input:hover {
+    box-shadow: 0px 0px 20px 0px #F2CEF2;
+}
+
+.bottom-section .bottom-okoye .bottom-section-left .bottom-answer .answer-send {
     display: flex;
     padding-left: 150px;
 }
@@ -797,22 +855,25 @@ input[type='text'] {
 /*bottom section right part*/
 
 /*text design*/
-.bottom-section .bottom-section-right p {
+.bottom-section .bottom-okoye .bottom-section-right .text-right{
+    position: absolute;
     font-size: 14px;
     text-align: center;
     width: 400px;
 }
 
 /*design*/
-.bottom-section .bottom-section-right {
+.bottom-section .bottom-okoye .bottom-section-right {
     display: flex;
-    flex-direction: column;
+   flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 50%;
+    padding-right: 75px;
 
 }
 
-.bottom-section .bottom-illustration {
-    
+.bottom-section .bottom-okoye .bottom-section-right .bottom-illustration img{
+    /*position: absolute;*/
+    width: auto;
 }
